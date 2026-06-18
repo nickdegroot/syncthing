@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: syncthing-lb
+  namespace: syncthing
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/instance: syncthing
+    app.kubernetes.io/name: syncthing
+  ports:
+    - name: sync-tcp
+      port: 22000
+      targetPort: 22000
+      protocol: TCP
+    - name: sync-udp
+      port: 22000
+      targetPort: 22000
+      protocol: UDP
