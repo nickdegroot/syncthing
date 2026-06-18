@@ -1,21 +1,3 @@
-ingress:
-  main:
-    enabled: true
-    className: traefik
-
-    hosts:
-      - host: syncthing.lan
-        paths:
-          - path: /
-            pathType: Prefix
-
-    service:
-      name: syncthing
-      port: 8384   # UI ONLY
-
-service:
-  type: ClusterIP   # keep default; we expose sync separately via NodePort
-
 persistence:
   config:
     enabled: true
