@@ -28,7 +28,7 @@ spec:
     # 3. Extra Kubernetes manifests (NodePort etc.)
     - repoURL: https://github.com/nickdegroot/syncthing.git
       targetRevision: main
-      path: k8s
+      path: manifests
 
   syncPolicy:
     automated:
