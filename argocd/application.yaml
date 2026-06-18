@@ -18,7 +18,7 @@ spec:
       chart: syncthing
       helm:
         valueFiles:
-          - $values/helm/values.yaml
+          - $values/values/syncthing-values.yaml
 
     # 2. Git repo (values reference)
     - repoURL: https://github.com/nickdegroot/syncthing.git
